@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: Alireza2794/azaduniversity
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
           build_dir: dist/azad-university-project
