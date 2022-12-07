@@ -87,8 +87,10 @@
 
 /* buttons cartable send  */
 .sendsubmited1{
-    width: 30px;
-    height: 14px;
+    height: 37px;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: #fff;
 }
 .sendsubmited{
     background: #173ff3;
