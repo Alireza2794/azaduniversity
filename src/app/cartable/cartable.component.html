@@ -1,0 +1,117 @@
+<!-- cartable for send message -->
+<div class="container-fluid">
+    <div class="row  my-5  py-4 cartable1">
+        <!-- button a new message  -->
+        <div class="col-lg-10 col-md-10 col-sm-8 col-8 sendnewback">
+            <a class="nav-link" [routerLink]="['#']" [routerLinkActive]="'active'"
+                [routerLinkActiveOptions]="{exact:true}">
+                <img src="../../assets/icons/share-arrow-855.png" class="sendbackicon">
+                <span class="sendnew mx-2">ارسال پیام جدید</span>
+            </a>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-8 col-8 py-4">
+            <form [formGroup]="mysendform" (ngSubmit)="onSubmit()">
+                <!-- cartable section  message -->
+                <div class="row maincartable">
+                    <!-- message title -->
+                    <div class="col-md-6 py-1 px-3 messagetitle">
+                        <div class="mb-2">
+                            <span>1</span>
+                            <span class="title ms-2">متن پیام </span>
+                        </div>
+                        <div class="mx-auto">
+                            <textarea class="form-control inputtext" formControlName="inputText" id="inputtext"  cols="30" rows="9"
+                                placeholder="متن پیام خود را اینجا وارد کنید" required
+                                [(ngModel)]="messagetitle" >
+                            </textarea>
+                        </div>
+                    </div>
+                    <!-- contact & data table -->
+                    <div class="col-md-6">
+                        <div class="row  table2">
+                            <!-- contact title -->
+                            <div class="col-md-11 mb-2 py-1 contacttitle">
+                                <div class="mb-2">
+                                    <span>2</span>
+                                    <span class="title ms-2">مخاطبین</span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <div class="me-1">
+                                        <label>مقطع</label>
+                                        <select class="form-control form-select"
+                                         formControlName="section" id="section" 
+                                         aria-label="Default select example"
+                                         [(ngModel)]="contanttitle" 
+                                         >
+                                            <option selected>همه موارد</option>
+                                            <option value="کاردانی"> کاردانی</option>
+                                            <option value="کارشناسی">کارشناسی</option>
+                                            <option value="کارشناسی ارشد"> کارشناسی ارشد</option>
+                                            <option value="دکتری"> دکتری</option>
+                                        </select>
+                                    </div>
+                                    <div class="me-1">
+                                        <label>رشته</label>
+                                        <select class="form-control form-select" formControlName="major" id="major"  aria-label="Default select example" required>
+                                            <option selected>همه موارد</option>
+                                            <option value="مهندسی کامپیوتر">مهندسی کامپیوتر</option>
+                                            <option value="مهندسی مواد و صنایع">مهندسی مواد و صنایع</option>
+                                            <option value="مهندسی مکانیک">مهندسی مکانیک</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="me-1">ترم</label>
+                                        <select class="form-control form-select" formControlName="term" id="term"  aria-label="Default select example" required>
+                                            <option selected>همه موارد</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- data title -->
+                            <div class="col-md-11 py-1 datatitle">
+                                <div class="mb-3">
+                                    <span>3</span>
+                                    <span class="title ms-2">تاریخ ارسال</span>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="form-check datatitlecheck">
+                                        <input class="form-check-input" type="radio" formControlName="sendNow"  id="sendnow"
+                                            value="اکنون ارسال شود" checked [(ngModel)]="datetitle">
+                                        <label class="form-check-label" for="sendnow">اکنون ارسال شود</label>
+                                    </div>
+                                    <div class="form-check datatitlecheck">
+                                        <input class="form-check-input" type="radio" formControlName="sendLater"  value="در تاریخ"
+                                            id="sendlater" [(ngModel)]="datetitle">
+                                        <label class="form-check-label" for="sendlater">در تاریخ</label>
+                                        <input type="date" class="data" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- buttons cartable send -->
+                <div class="col-lg-12 col-md-10 col-sm-8 col-8 mt-3 sendbox">
+                    <input type="button" class="draft me-3" value="ذخیره به عنوان پیش نویس"
+                        onclick="alert('پیام شما با موفیقت ذخیره گردید')">
+                    <button class="btn send2" type="submit" onclick="alert('پیام شما با موفیقت ارسال گردید')">
+                        <span class="sendnew1 px-3">ارسال</span>
+                        <span class="icon"><img src="../../assets/icons/arrow-212.svg" class="sendsubmited1"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,158 @@
+/* search form box css */
+.filterlist {
+    background-color: #fff;
+}
+.form-range {
+    width: 90%;
+    height: 1.5rem;
+}
+
+.titlesearch {
+    border-right: 2px solid blue;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search_input {
+    border-radius: 16px;
+}
+
+.form-control {
+    font-size: x-small;
+    font-weight: 300;
+}
+
+.form-group,
+.form-select {
+    font-size: smaller;
+    font-weight: 300;
+}
+
+/* table student list css */
+.list {
+    background-color: #fff;
+}
+
+.table>thead {
+    font-size: x-small;
+    font-weight: 300;
+}
+
+.table>tbody {
+    font-size: small;
+    font-weight: 400;
+}
+
+.bi {
+    color: orange;
+    font-size: 15px;
+}
+
+.avatar {
+    height: 26px;
+}
+/* student list responsive  */
+
+@media (min-width : 992px) and (max-width : 1199.98px) {
+    .table>thead {
+        font-size: x-small;
+        font-weight: 300;
+    }
+
+    .table>tbody {
+        font-size: x-small;
+        font-weight: 400;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 991.98px) {
+    .titlesearch {
+        font-size: small;
+    }
+
+    .form-control {
+        font-size: xx-small;
+    }
+
+    .form-group,
+    .form-select {
+        font-size: xx-small;
+    }
+
+    .table>thead {
+        font-size: xx-small;
+    }
+
+    .table>tbody {
+        font-size: 8px;
+    }
+
+    .bi {
+        font-size: 12px;
+    }
+
+    .avatar {
+        height: 18px;
+    }
+}
+
+@media (min-width : 576px) and (max-width : 767.98px) {
+    .titlesearch {
+        font-size: 10px;
+    }
+
+    .form-control {
+        font-size: 7px;
+    }
+
+    .form-group,
+    .form-select {
+        font-size: xx-small;
+    }
+
+    .table>thead {
+        font-size: 6px;
+    }
+
+    .table>tbody {
+        font-size: 7px;
+    }
+
+    .bi {
+        font-size: 8px;
+    }
+
+    .avatar {
+        height: 12px;
+    }
+}
+
+@media (max-width : 575.98px) {
+    .titlesearch {
+        font-size: 10px;
+    }
+
+    .form-control {
+        font-size: 7px;
+    }
+
+    .form-group,
+    .form-select {
+        font-size: xx-small;
+    }
+    .table>thead {
+        font-size: xx-small;
+    }
+
+    .table>tbody {
+        font-size: 8px;
+    }
+
+    .bi {
+        font-size: 12px;
+    }
+
+    .avatar {
+        height: 18px;
+    }
+}

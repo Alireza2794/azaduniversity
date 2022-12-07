@@ -1,0 +1,37 @@
+
+.header{
+    font-family: Vazirmatn RD UI FD;
+    border-bottom:  1px solid #b3b5b85e;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.brand{
+    font-weight: 600;
+    font-size: smaller;
+}
+.exit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exit{
+    font-weight: 200;
+    font-size: smaller;
+    align-items: center;
+}
+
+@media ( min-width : 768px){
+    .row {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width : 768px) {
+    .row{
+        text-align: center;
+    }
+}

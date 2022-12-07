@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- search student list -->
+        <div class="col-lg-3 col-lg-offset-8 col-sm-3 col-xm-6 col-11 my-1 py-2 filterlist">
+            <div class="row">
+                <div class="col-md-12 col-12 py-4">
+                    <h5 class="titlesearch">جستجو فیلتر</h5>
+                    <input class="form-control search_input" type="text" name="search" autocomplete="off"
+                        placeholder="جستجو با نام ونام خانوادگی ،کدملی،کددانشجویی و..." [(ngModel)]="searchText">
+                </div>
+                <hr>
+                <div class="col-md-12 col-12 my-2 py-3">
+                    <form class="form-group">
+                        <div class="mb-3">
+                            <label>رشته تحصیلی</label>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="searchmajor"
+                                [ngModelOptions]="{standalone: true}">
+                                <option [value]="list" selected>همه موارد</option>
+                                <option value="مهندسی کامپیوتر">مهندسی کامپیوتر</option>
+                                <option value="مهندسی مواد و صنایع">مهندسی مواد و صنایع</option>
+                                <option value="مهندسی مکانیک">مهندسی مکانیک</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>مقطع تحصیلی</label>
+                            <select class="form-select" [(ngModel)]="searchsection"
+                                [ngModelOptions]="{standalone: true}">
+                                <option [value]="list" selected>همه موارد</option>
+                                <option value="کاردانی"> کاردانی</option>
+                                <option value="کارشناسی">کارشناسی</option>
+                                <option value="کارشناسی ارشد"> کارشناسی ارشد</option>
+                                <option value="دکتری"> دکتری</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>ترم</label>
+                            <div>
+                                <span>1</span><input type="range" name="range" id="slider" value="1" class="form-range"
+                                    step="any" min="1" max="12" [(ngModel)]="searchterm"><span>12</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- table of student list -->
+        <div class="col-lg-8 col-lg-offset-3 col-sm-8 col-xm-6 col-11 my-1 py-2 mx-2 list">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>نام و نام خانوادگی</th>
+                        <th>کد دانشجویی</th>
+                        <th>کدملی</th>
+                        <th>رشته تحصیلی</th>
+                        <th>ترم ومقطع</th>
+                        <th><i class="bi bi-plus-circle-fill"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let table of tables | filter:searchText | filter: searchmajor |filter:searchsection">
+                        <td><img [src]="table.imagesrc" class="avatar me-1" />{{table.fullname}}</td>
+                        <td>{{table.studentid}}</td>
+                        <td>{{table.personalid}}</td>
+                        <td>{{table.major}}</td>
+                        <td>{{table.term}} - {{table.section}}</td>
+                        <td [ngStyle]="{'color': 'orange'}">{{table.star}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
