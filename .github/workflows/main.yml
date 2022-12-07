@@ -28,5 +28,5 @@ jobs:
           target_branch: master
           build_dir: dist/azad-university-project
         env:
-          GITHUB_TOKEN: ${{ secrets.azad-university-projectsec }}
+          GITHUB_TOKEN: ${{ secrets.AZAD_TOKEN }}
 
