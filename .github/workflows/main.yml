@@ -25,7 +25,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
-          target_branch: gh-pages
+          target_branch: master
           build_dir: dist/azad-university-project
         env:
           GITHUB_TOKEN: ${{ secrets.azad-university-projectsec }}
